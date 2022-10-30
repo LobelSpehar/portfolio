@@ -1,26 +1,32 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import { Routes, Navigate, Route, useLocation } from 'react-router-dom';
 
-function App() {
+import { SideBar } from 'modules/components/SideBar/SideBar';
+import { AboutMe } from 'pages/AboutMe';
+import { Home } from 'pages/Home';
+import { Portfolio } from 'pages/Portfolio';
+import { Contact } from 'pages/Contact';
+import { SideBarLink } from 'modules/components/SideBar/SideBarLink';
+import { TopBar } from 'modules/components/TopBar/TopBar';
+
+export function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className='bg-primary w-full'>
+      <SideBar>
+        <SideBarLink path={'home'}>{'<Home />'}</SideBarLink>
+        <SideBarLink path={'portfolio'}>{'<Portfolio />'}</SideBarLink>
+        <SideBarLink path={'about_me'}>{'<AboutMe />'}</SideBarLink>
+        <SideBarLink path={'contact'}>{'<Contact />'}</SideBarLink>
+      </SideBar>
+      <TopBar pathName={useLocation().pathname} />
+
+      <Routes>
+        <Route path='/' element={<Navigate to='/home' />}></Route>
+        <Route path='/home' element={<Home />} />
+        <Route path='/portfolio' element={<Portfolio />} />
+        <Route path='/about_me' element={<AboutMe />} />
+        <Route path='/contact' element={<Contact />} />
+        <Route path='*' element={<div>Error no match</div>} />
+      </Routes>
     </div>
   );
 }
-
-export default App;
