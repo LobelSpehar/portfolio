@@ -2,6 +2,26 @@
 @tailwind components;
 @tailwind utilities;
 
+textarea:focus,
+select:focus,
+input:focus {
+  outline: none;
+}
+
+.root,
+#root,
+#docs-root {
+  --primary: #2a2b2a;
+  --secondary: #706c61;
+  --pale: #f8f4e3;
+  --blueish: #79a9d1;
+  --accent: #f03a47;
+}
+.light {
+  --primary: #706c61;
+  --secondary: #2a2b2a;
+}
+
 @font-face {
   font-family: 'Syne';
   src: local('Syne'), url('./assets/fonts/Syne.ttf') format('truetype');

@@ -12,7 +12,7 @@ export function CarouselNavigation({
     onSetActiveImage(newAmount);
   };
   return (
-    <section className='w-52 flex justify-around flex-row relative -top-24 mx-auto text-4xl text-accent font-bold text-center'>
+    <section className='w-52 flex justify-around flex-row relative lg:-top-[5vw] mx-auto text-4xl text-accent font-bold text-center'>
       <button
         disabled={activeImage === 0}
         onClick={(e) => eventHandler(-1)}

@@ -1,12 +1,12 @@
 import { useEffect, useState } from 'react';
 
-import { GalleryContainer } from 'modules/components/Portfolio/GalleryContainer';
-import { Tile } from 'modules/components/Portfolio/Tile';
-import { TileInfo } from 'modules/components/Portfolio/TileInfo';
+import { GalleryContainer } from 'modules/components/portfolio/GalleryContainer';
+import { Tile } from 'modules/components/portfolio/Tile';
+import { TileInfo } from 'modules/components/portfolio/TileInfo';
 import { useProjectsDB } from 'modules/hooks/useProjectsDB';
 import { projectsType } from 'modules/types/projectsType';
 import GitHubLogo from '../assets/images/GitHubLogo.png';
-import { Modal } from 'modules/components/Portfolio/Modal';
+import { Modal } from 'modules/components/portfolio/Modal';
 
 export function Portfolio() {
   const { fetchProjectList, fetchImages } = useProjectsDB();
@@ -22,8 +22,9 @@ export function Portfolio() {
     let res = fetchImages(title);
     setModalImages(res);
   };
+
   return (
-    <main className='bg-primary w-full h-full overflow-hidden'>
+    <main className='w-full h-full lg:overflow-hidden pb-10 lg:pb-0'>
       <GalleryContainer>
         <>
           {projectsState &&
@@ -47,10 +48,10 @@ export function Portfolio() {
             <Tile
               project={{
                 posX: 46,
-                posY: 36,
+                posY: 40,
                 width: 200,
                 height: 200,
-                color: '#706C61',
+                color: '#f8f4e3',
                 title: '',
                 text: '',
                 images: [GitHubLogo],

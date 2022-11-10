@@ -1,6 +1,6 @@
-import { CarouselImage } from 'modules/components/Portfolio/Modal/CarouselImage';
-import { CarouselNavigation } from 'modules/components/Portfolio/Modal/CarouselNavigation';
-import { CloseBtn } from 'modules/components/Portfolio/Modal/CloseBtn';
+import { CarouselImage } from 'modules/components/portfolio/modal/CarouselImage';
+import { CarouselNavigation } from 'modules/components/portfolio/modal/CarouselNavigation';
+import { CloseBtn } from 'modules/components/portfolio/modal/CloseBtn';
 import { useState } from 'react';
 export function Modal({
   images,

@@ -18,7 +18,7 @@ export function SideBarLink({
                 letterSpacing: '0.1em',
                 fontWeight: 'bold',
               }
-            : undefined
+            : {}
         }
       >
         {children}

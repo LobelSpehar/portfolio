@@ -15,13 +15,17 @@ export function GalleryContainer({
   };
 
   return (
-    <div className='w-screen h-screen overflow-hidden'>
+    <div className='w-screen lg:h-screen pt-20 lg:pt-0'>
       <div
-        className='h-[200vh] w-[200vw] duration-500 ease-out'
+        className='lg:h-[200vh] lg:w-[200vw] duration-500 ease-out'
         onMouseMove={handleMouse}
-        style={{
-          transform: `translateX(${mousePosition.x}px) translateY(${mousePosition.y}px)`,
-        }}
+        style={
+          window.innerWidth < 769
+            ? {}
+            : {
+                transform: `translateX(${mousePosition.x}px) translateY(${mousePosition.y}px)`,
+              }
+        }
       >
         {children}
       </div>

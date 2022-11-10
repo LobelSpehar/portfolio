@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react';
-import { MovingText } from 'modules/components/Home/LandingView/MovingText';
+import { MovingText } from 'modules/components/home/landingView/MovingText';
 import portrait from '../../../assets/images/Portrait.png';
 
 export function LandingView() {
@@ -30,15 +30,15 @@ export function LandingView() {
     delayAnimation();
   }, []);
   return (
-    <section className='h-screen '>
-      <ul className='ml-[20vw] mt-20 text-pale text-4xl overflow-hidden '>
+    <section className='h-screen pt-20'>
+      <ul className='ml-[20vw] pt-32 text-pale sm:text-xl md:text-3xl lg:text-4xl overflow-hidden '>
         {delayedText.map((item, index) => (
           <MovingText key={index}>{item}</MovingText>
         ))}
       </ul>
       <img
         src={portrait}
-        className='saturate-[0.8] absolute left-[70vw] top-20 mt-10 rounded-full border w-1/4 h-auto border-8 border-blueish animate-appear'
+        className='saturate-[0.8] z-10 absolute left-[70vw] top-20 mt-10 rounded-full border w-1/4 h-auto border-8 border-blueish animate-appear'
         alt='Portrait'
       ></img>
     </section>

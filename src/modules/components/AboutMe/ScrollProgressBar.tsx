@@ -1,5 +1,5 @@
 import { motion, useScroll } from 'framer-motion';
-import { ScrollReminder } from 'modules/components/Portfolio/ScrollReminder';
+import { ScrollReminder } from 'modules/components/portfolio/ScrollReminder';
 import { useState } from 'react';
 
 export function ScrollProgressBar() {

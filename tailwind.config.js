@@ -1,14 +1,15 @@
 /** @type {import('tailwindcss').Config} */
+
 module.exports = {
   content: ['./src/**/*.{js,jsx,ts,tsx}'],
   theme: {
     extend: {
       colors: {
-        primary: '#2A2B2A',
-        secondary: '#706C61',
-        pale: '#F8F4E3',
-        blueish: '#79A9D1',
-        accent: '#F03A47',
+        primary: 'var(--primary)',
+        secondary: 'var(--secondary)',
+        pale: 'var(--pale)',
+        blueish: 'var(--blueish)',
+        accent: 'var(--accent)',
       },
       keyframes: {
         moveLeft: {

@@ -16,7 +16,6 @@ import Weather2 from '../../assets/images/portfolioImages/Weather2.png';
 import Weather3 from '../../assets/images/portfolioImages/Weather3.png';
 import Weather4 from '../../assets/images/portfolioImages/Weather4.png';
 
-//change ratio to 16/9
 export function useProjectsDB() {
   const projectsDB: Array<projectsType> = [
     {

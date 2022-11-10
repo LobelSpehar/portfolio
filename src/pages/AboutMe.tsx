@@ -1,10 +1,10 @@
-import { ListItem } from 'modules/components/AboutMe/ListItem';
-import { ScrollProgressBar } from 'modules/components/AboutMe/ScrollProgressBar';
+import { ListItem } from 'modules/components/aboutMe/ListItem';
+import { ScrollProgressBar } from 'modules/components/aboutMe/ScrollProgressBar';
 
 export function AboutMe() {
   return (
-    <main className='w-full h-[4000px]'>
-      <ul className='mt-32 select-none w-full pr-20 pl-20 fixed top-0 z-20 text-accent font-bold text-3xl'>
+    <main className='w-full h-[300vh]'>
+      <ul className=' mt-16 select-none w-full pr-20 py-[5vw] fixed top-0 z-20 text-accent font-bold md:text-2xl lg:text-3xl xl:text-4xl'>
         <ListItem year={1992} title={'born'} duration={''}>
           on 15th of April in Pula, Croatia
         </ListItem>
@@ -37,7 +37,7 @@ export function AboutMe() {
           self taught
         </ListItem>
         <ListItem year={2022} title={'New job'} duration={'for a long time'}>
-          *Insert your bussiness name here*
+          *Your bussiness name here*
         </ListItem>
       </ul>
       <ScrollProgressBar />

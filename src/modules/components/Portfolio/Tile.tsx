@@ -10,24 +10,28 @@ export function Tile({
   const image = project.images || [''];
   return (
     <div
-      className='absolute animate-appear select-none group text-primary overflow-hidden rounded rounded-xl'
-      style={{
-        left: `${project.posX}%`,
-        top: `${project.posY}%`,
-        height: `${project.height}px`,
-        width: `${project.width}px`,
-        backgroundColor: `${project.color}`,
-      }}
+      className='lg:absolute h-[250px] w-[95vw] m-2 animate-appear select-none group text-primary overflow-hidden rounded rounded-xl'
+      style={
+        window.innerWidth < 769
+          ? { backgroundColor: `${project.color}` }
+          : {
+              left: `${project.posX}%`,
+              top: `${project.posY}%`,
+              height: `${project.height}px`,
+              width: `${project.width}px`,
+              backgroundColor: `${project.color}`,
+            }
+      }
     >
+      <div className='lg:p-6 lg:absolute lg:top-0  lg:group-hover:opacity-0 transition-opacity duration-700 ease-out text-left'>
+        {children}
+      </div>
       <img
         draggable={false}
         src={image[0]}
-        className='object-cover w-full h-full touch-none opacity-0 group-hover:opacity-100 transition-opacity duration-700 ease-out'
+        className='object-cover w-full h-full touch-none opacity-0 lg:group-hover:opacity-100 transition-opacity duration-700 ease-out'
         alt='text'
       ></img>
-      <div className='p-6 absolute top-0 group-hover:opacity-0 transition-opacity duration-700 ease-out'>
-        {children}
-      </div>
     </div>
   );
 }
