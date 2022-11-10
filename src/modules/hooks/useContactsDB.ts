@@ -1,4 +1,5 @@
 import { contactsType } from 'modules/types/contactsType';
+import { iconsType } from 'modules/types/iconsType';
 import { useState } from 'react';
 import email from '../../assets/svg/contactIcons/email.svg';
 import git from '../../assets/svg/contactIcons/git.svg';
@@ -7,13 +8,7 @@ import phone from '../../assets/svg/contactIcons/phone.svg';
 import unknown from '../../assets/svg/contactIcons/unknown.svg';
 
 export function useContactsDB() {
-  const icons: {
-    email: string;
-    git: string;
-    linkedin: string;
-    phone: string;
-    unknown: string;
-  } = {
+  const icons: iconsType = {
     email: email,
     git: git,
     linkedin: linkedin,

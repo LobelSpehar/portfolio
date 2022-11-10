@@ -1,3 +1,4 @@
+import { MouseEvent } from 'modules/types/mouseEventType';
 import { useState } from 'react';
 
 export function GalleryContainer({
@@ -7,7 +8,7 @@ export function GalleryContainer({
 }) {
   const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
 
-  const handleMouse = (event: any) => {
+  const handleMouse = (event: MouseEvent) => {
     setMousePosition({
       x: -event.pageX,
       y: -event.pageY,

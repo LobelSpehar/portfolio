@@ -17,7 +17,7 @@ export function LandingView() {
     <p>&#65373;;</p>,
   ];
 
-  const [delayedText, setDelayedText] = useState<Array<any>>([]);
+  const [delayedText, setDelayedText] = useState<Array<JSX.Element>>([]);
   const delayAnimation = () => {
     myText.forEach((item, index) => {
       let delay = index * (300 - index * 12);
