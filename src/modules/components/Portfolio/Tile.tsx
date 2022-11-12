@@ -1,4 +1,4 @@
-import { projectsType } from 'modules/types/projectsType';
+import { projectsType } from 'modules/types/index';
 
 export function Tile({
   project,
@@ -10,7 +10,7 @@ export function Tile({
   const image = project.images || [''];
   return (
     <div
-      className='lg:absolute h-[250px] w-[95vw] m-2 animate-appear select-none group text-primary overflow-hidden rounded rounded-xl'
+      className='lg:absolute h-[250px] w-[95vw] m-2 animate-appear select-none group text-[#2a2b2a] overflow-hidden rounded rounded-xl'
       style={
         window.innerWidth < 769
           ? { backgroundColor: `${project.color}` }

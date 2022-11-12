@@ -1,7 +1,11 @@
-import { CarouselImage } from 'modules/components/portfolio/modal/CarouselImage';
-import { CarouselNavigation } from 'modules/components/portfolio/modal/CarouselNavigation';
-import { CloseBtn } from 'modules/components/portfolio/modal/CloseBtn';
 import { useState } from 'react';
+
+import {
+  CarouselImage,
+  CarouselNavigation,
+  CloseBtn,
+} from 'modules/components/index';
+
 export function Modal({
   images,
   onCloseModal,

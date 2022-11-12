@@ -1,13 +1,9 @@
+import { useEffect, useState } from 'react';
 import { Routes, Navigate, Route, useLocation } from 'react-router-dom';
 
-import { SideBar } from 'modules/components/sideBar/SideBar';
-import { AboutMe } from 'pages/AboutMe';
-import { Home } from 'pages/Home';
-import { Portfolio } from 'pages/Portfolio';
-import { Contact } from 'pages/Contact';
-import { SideBarLink } from 'modules/components/sideBar/SideBarLink';
-import { TopBar } from 'modules/components/topBar/TopBar';
-import { useEffect, useState } from 'react';
+import { SideBar, SideBarLink, TopBar } from 'modules/components/index';
+import { AboutMe, Home, Portfolio, Contact } from 'pages/index';
+import { Notification } from 'modules/components/notifications/Notification';
 
 export function App() {
   const [theme, setTheme] = useState<string>('dark');
@@ -18,6 +14,7 @@ export function App() {
   }, [pathName]);
   return (
     <div className={'bg-primary w-full duration-500 ' + theme}>
+      <Notification />
       <SideBar pathName={pathName}>
         <SideBarLink path={'home'}>{'<Home />'}</SideBarLink>
         <SideBarLink path={'portfolio'}>{'<Portfolio />'}</SideBarLink>

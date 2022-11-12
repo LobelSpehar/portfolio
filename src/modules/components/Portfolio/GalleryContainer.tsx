@@ -1,5 +1,6 @@
-import { MouseEvent } from 'modules/types/mouseEventType';
 import { useState } from 'react';
+
+import { MouseEvent } from 'modules/types/index';
 
 export function GalleryContainer({
   children,

@@ -1,4 +1,4 @@
-import { ThemeToggleBtn } from 'modules/components/topBar/ThemeToggleBtn';
+import { ThemeToggleBtn } from 'modules/components/index';
 
 export function TopBar({
   pathName,

@@ -1,6 +1,8 @@
-import { motion, useScroll } from 'framer-motion';
-import { ScrollReminder } from 'modules/components/aboutMe/ScrollReminder';
 import { useState } from 'react';
+
+import { motion, useScroll } from 'framer-motion';
+
+import { ScrollReminder } from 'modules/components/index';
 
 export function ScrollProgressBar() {
   const [height, setHeight] = useState(0);

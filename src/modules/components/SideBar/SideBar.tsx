@@ -1,5 +1,6 @@
-import { NavButton } from 'modules/components/sideBar/NavButton';
 import { useEffect, useState } from 'react';
+
+import { NavButton } from 'modules/components/index';
 
 export function SideBar({
   pathName,

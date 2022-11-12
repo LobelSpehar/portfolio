@@ -1,4 +1,8 @@
-import { contactsType } from 'modules/types/contactsType';
+import { useSetRecoilState } from 'recoil';
+import { notificationAtom } from 'recoil/atoms/notificationAtom';
+
+import { Copy, Trash } from 'assets/images/index';
+import { contactsType } from 'modules/types/index';
 
 export function ContactListItem({
   contact,
@@ -7,6 +11,24 @@ export function ContactListItem({
   contact: contactsType;
   onDeleteContact: Function;
 }) {
+  const setNotification = useSetRecoilState(notificationAtom);
+  const copyHandler = () => {
+    navigator.clipboard.writeText(contact.value);
+    setNotification({
+      color: 'blue',
+      text: 'Copied to clipboard!',
+      duration: 2,
+    });
+  };
+  const deleteHandler = () => {
+    navigator.clipboard.writeText(contact.value);
+    setNotification({
+      color: 'green',
+      text: 'Contact deleted successfully',
+      duration: 3,
+    });
+    onDeleteContact(contact.id);
+  };
   return (
     <li className='w-full flex flex-row group border-b border-secondary'>
       <img
@@ -17,10 +39,16 @@ export function ContactListItem({
 
       <p className='p-4 select-text break-words w-1/2'>{contact.value}</p>
       <button
-        onClick={(e) => onDeleteContact(contact.id)}
-        className='opacity-0 pr-2 ml-auto group-hover:opacity-100 duration-200 scale-90 hover:scale-100'
+        onClick={copyHandler}
+        className='opacity-0 pr-4 ml-auto group-hover:opacity-100 duration-200 scale-90 hover:scale-100'
       >
-        delete
+        <img src={Copy} alt='Copy'></img>
+      </button>
+      <button
+        onClick={deleteHandler}
+        className='opacity-0 pr-2 group-hover:opacity-100 duration-200 scale-90 hover:scale-100 pr-4'
+      >
+        <img src={Trash} alt='Trash'></img>
       </button>
     </li>
   );

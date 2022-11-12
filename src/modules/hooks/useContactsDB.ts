@@ -1,11 +1,8 @@
-import { contactsType } from 'modules/types/contactsType';
-import { iconsType } from 'modules/types/iconsType';
 import { useState } from 'react';
-import email from '../../assets/svg/contactIcons/email.svg';
-import git from '../../assets/svg/contactIcons/git.svg';
-import linkedin from '../../assets/svg/contactIcons/linkedin.svg';
-import phone from '../../assets/svg/contactIcons/phone.svg';
-import unknown from '../../assets/svg/contactIcons/unknown.svg';
+
+import { contactsType, iconsType } from 'modules/types/index';
+
+import { email, git, linkedin, phone, unknown } from 'assets/svg/index';
 
 export function useContactsDB() {
   const icons: iconsType = {
@@ -48,5 +45,8 @@ export function useContactsDB() {
     let newList = contactList.concat(contact);
     setContactList(newList);
   };
-  return { contactList, onDeleteContact, onAddContact, icons };
+  const onRefreshList = () => {
+    setContactList(baseContacts);
+  };
+  return { contactList, onDeleteContact, onAddContact, icons, onRefreshList };
 }

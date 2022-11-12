@@ -1,12 +1,14 @@
 import { useEffect, useState } from 'react';
 
-import { GalleryContainer } from 'modules/components/portfolio/GalleryContainer';
-import { Tile } from 'modules/components/portfolio/Tile';
-import { TileInfo } from 'modules/components/portfolio/TileInfo';
+import {
+  GalleryContainer,
+  Tile,
+  TileInfo,
+  Modal,
+} from 'modules/components/index';
 import { useProjectsDB } from 'modules/hooks/useProjectsDB';
-import { projectsType } from 'modules/types/projectsType';
-import GitHubLogo from '../assets/images/GitHubLogo.png';
-import { Modal } from 'modules/components/portfolio/Modal';
+import { projectsType } from 'modules/types/index';
+import { GitHubLogo } from '../assets/images/index';
 
 export function Portfolio() {
   const { fetchProjectList, fetchImages } = useProjectsDB();

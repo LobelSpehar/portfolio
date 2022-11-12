@@ -1,20 +1,23 @@
-import { projectsType } from 'modules/types/projectsType';
-import CarConfig1 from '../../assets/images/portfolioImages/CarConfig1.png';
-import CarConfig2 from '../../assets/images/portfolioImages/CarConfig2.png';
-import CarConfig3 from '../../assets/images/portfolioImages/CarConfig3.png';
-import CarConfig4 from '../../assets/images/portfolioImages/CarConfig4.png';
-import ContactList1 from '../../assets/images/portfolioImages/ContactList1.png';
-import ContactList2 from '../../assets/images/portfolioImages/ContactList2.png';
-import ContactList3 from '../../assets/images/portfolioImages/ContactList3.png';
-import ContactList4 from '../../assets/images/portfolioImages/ContactList4.png';
-import Movies1 from '../../assets/images/portfolioImages/Movies1.png';
-import Movies2 from '../../assets/images/portfolioImages/Movies2.png';
-import Movies3 from '../../assets/images/portfolioImages/Movies3.png';
-import Movies4 from '../../assets/images/portfolioImages/Movies4.png';
-import Weather1 from '../../assets/images/portfolioImages/Weather1.png';
-import Weather2 from '../../assets/images/portfolioImages/Weather2.png';
-import Weather3 from '../../assets/images/portfolioImages/Weather3.png';
-import Weather4 from '../../assets/images/portfolioImages/Weather4.png';
+import { projectsType } from 'modules/types/index';
+
+import {
+  CarConfig1,
+  CarConfig2,
+  CarConfig3,
+  CarConfig4,
+  ContactList1,
+  ContactList2,
+  ContactList3,
+  ContactList4,
+  Movies1,
+  Movies2,
+  Movies3,
+  Movies4,
+  Weather1,
+  Weather2,
+  Weather3,
+  Weather4,
+} from 'assets/images/portfolioImages/index';
 
 export function useProjectsDB() {
   const projectsDB: Array<projectsType> = [

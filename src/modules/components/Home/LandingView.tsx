@@ -1,6 +1,8 @@
 import { useEffect, useState } from 'react';
-import { MovingText } from 'modules/components/home/landingView/MovingText';
-import portrait from '../../../assets/images/Portrait.png';
+
+import { MovingText } from 'modules/components/index';
+
+import { Portrait } from 'assets/images/index';
 
 export function LandingView() {
   const myText = [
@@ -37,7 +39,7 @@ export function LandingView() {
         ))}
       </ul>
       <img
-        src={portrait}
+        src={Portrait}
         className='saturate-[0.8] z-10 absolute left-[70vw] top-20 mt-10 rounded-full border w-1/4 h-auto border-8 border-blueish animate-appear'
         alt='Portrait'
       ></img>
