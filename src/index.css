@@ -17,9 +17,9 @@ input:focus {
   --blueish: #79a9d1;
   --accent: #f03a47;
 }
-.light {
-  --primary: #706c61;
-  --secondary: #2a2b2a;
+.cherry {
+  --primary: #241818;
+  --secondary: #616270;
 }
 
 @font-face {

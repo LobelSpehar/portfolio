@@ -10,7 +10,7 @@ export function Tile({
   const image = project.images || [''];
   return (
     <div
-      className='lg:absolute h-[250px] w-[95vw] m-2 animate-appear select-none group text-[#2a2b2a] overflow-hidden rounded rounded-xl'
+      className='md:absolute h-[250px] w-[95vw] m-2 animate-appear select-none group text-[#2a2b2a] overflow-hidden rounded rounded-xl'
       style={
         window.innerWidth < 769
           ? { backgroundColor: `${project.color}` }
@@ -23,13 +23,13 @@ export function Tile({
             }
       }
     >
-      <div className='lg:p-6 lg:absolute lg:top-0  lg:group-hover:opacity-0 transition-opacity duration-700 ease-out text-left'>
+      <div className='md:p-6 md:absolute md:top-0 text-left backdrop-blur-sm z-10'>
         {children}
       </div>
       <img
         draggable={false}
         src={image[0]}
-        className='object-cover w-full h-full touch-none opacity-0 lg:group-hover:opacity-100 transition-opacity duration-700 ease-out'
+        className='object-cover w-full h-full touch-none opacity-0 md:group-hover:opacity-100 transition-opacity duration-700 ease-out'
         alt='text'
       ></img>
     </div>

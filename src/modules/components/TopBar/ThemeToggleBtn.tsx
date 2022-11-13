@@ -1,3 +1,5 @@
+import { Cherry, Moon } from 'assets/images';
+
 export function ThemeToggleBtn({
   onToggleTheme,
   theme,
@@ -6,29 +8,24 @@ export function ThemeToggleBtn({
   theme: string;
 }) {
   const toggleHandler = () => {
-    onToggleTheme((current: string) => (current === 'dark' ? 'light' : 'dark'));
+    onToggleTheme((current: string) =>
+      current === 'dark' ? 'cherry' : 'dark'
+    );
   };
   const isThemeDark = theme === 'dark';
   return (
     <button
       onClick={toggleHandler}
-      className='bg-pale mt-6 mr-8 h-8 w-20 rounded-full border border-transparent hover:border-accent border-2 duration-500'
+      className='mt-6 mr-8 h-9 w-16 group rounded-full bg-primary border border-secondary hover:border-accent border-2 duration-500'
     >
-      <p
+      <img
+        src={isThemeDark ? Moon : Cherry}
+        alt='Theme'
         className={
-          'relative w-0 h-0 text-accent duration-500 font-bold tracking-widest ' +
-          (isThemeDark ? 'left-2' : 'left-8')
+          'relative w-7 transition-all bg-secondary group-hover:bg-accent border border-2 border-black rounded-full duration-200 delay-100 ease-in-out ' +
+          (isThemeDark ? 'left-1' : 'left-7')
         }
-      >
-        {theme}
-      </p>
-
-      <div
-        className={
-          'h-6 w-6 bg-primary rounded-full mx-1 transition-all duration-500 ' +
-          (isThemeDark ? 'translate-x-11' : '')
-        }
-      ></div>
+      ></img>
     </button>
   );
 }

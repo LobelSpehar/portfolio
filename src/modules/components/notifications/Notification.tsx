@@ -6,7 +6,8 @@ export function Notification() {
   const [{ color, text, duration }, setNotification] =
     useRecoilState(notificationAtom);
   const timer = useRef<any>(null);
-
+  const borderColor =
+    color === 'green' ? '#4CAF50' : color === 'blue' ? '#2196F3' : '#F44336';
   useEffect(() => {
     if (duration) {
       clearTimeout(timer.current);
@@ -16,22 +17,16 @@ export function Notification() {
           text: text,
           duration: duration - 1,
         });
-
-        if (duration <= 1) {
-          timer.current = setTimeout(() => {
-            setNotification({ color: '', text: '', duration: 0 });
-          }, 2000);
-        }
       }, 1000);
     }
   }, [duration]);
   return (
     <div
       className={
-        'transiton-all text-center w-auto rounded-full px-4 py-2 duration-500 ease-in-out fixed top-4 left-[50vw] -translate-x-1/2 z-[60] ' +
-        (duration ? ' opacity-100' : 'opacity-0 w-0')
+        'transiton-all text-center text-pale border border-4 w-auto rounded-md px-4 py-2 duration-200 ease-out fixed top-4 left-[50vw] -translate-x-1/2 z-[60] ' +
+        (duration ? ' opacity-100' : 'opacity-0')
       }
-      style={{ backgroundColor: color }}
+      style={{ borderColor: borderColor }}
     >
       <strong className='tracking-widest text-xl'>{text}</strong>
     </div>

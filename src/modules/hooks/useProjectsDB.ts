@@ -22,8 +22,8 @@ import {
 export function useProjectsDB() {
   const projectsDB: Array<projectsType> = [
     {
-      posX: 12,
-      posY: 13,
+      posX: 20,
+      posY: 14,
       width: 800,
       height: 450,
       color: '#79A9D1',
@@ -32,8 +32,8 @@ export function useProjectsDB() {
       images: [CarConfig1, CarConfig2, CarConfig3, CarConfig4],
     },
     {
-      posX: 67,
-      posY: 18,
+      posX: 60,
+      posY: 16,
       width: 400,
       height: 600,
       color: '#CD79D1',
@@ -43,7 +43,7 @@ export function useProjectsDB() {
       images: [ContactList1, ContactList2, ContactList3, ContactList4],
     },
     {
-      posX: 61,
+      posX: 56,
       posY: 57,
       width: 1024,
       height: 576,
@@ -53,7 +53,7 @@ export function useProjectsDB() {
       images: [Movies1, Movies2, Movies3, Movies4],
     },
     {
-      posX: 22,
+      posX: 26,
       posY: 53,
       width: 558,
       height: 744,

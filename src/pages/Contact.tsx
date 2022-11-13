@@ -1,5 +1,4 @@
-import { ContactForm } from 'modules/components/contact/ContactForm';
-import { ContactListItem } from 'modules/components/contact/ContactListItem';
+import { ContactListItem, ContactForm } from 'modules/components/index';
 import { useContactsDB } from 'modules/hooks/useContactsDB';
 import { Refresh } from 'assets/images/index';
 

@@ -4,7 +4,7 @@ import { MovingText } from 'modules/components/index';
 
 import { Portrait } from 'assets/images/index';
 
-export function LandingView() {
+export function LandingView({ skewAmount }: { skewAmount: number }) {
   const myText = [
     <p>const myObject =&#65371;</p>,
     <p>&emsp;name:&#65371;</p>,
@@ -18,7 +18,6 @@ export function LandingView() {
     <p>&emsp;&#65373;,</p>,
     <p>&#65373;;</p>,
   ];
-
   const [delayedText, setDelayedText] = useState<Array<JSX.Element>>([]);
   const delayAnimation = () => {
     myText.forEach((item, index) => {
@@ -33,7 +32,7 @@ export function LandingView() {
   }, []);
   return (
     <section className='h-screen pt-20'>
-      <ul className='ml-[20vw] pt-32 text-pale sm:text-xl md:text-3xl lg:text-4xl overflow-hidden '>
+      <ul className='ml-[20vw] pt-32 text-pale sm:text-xl md:text-3xl lg:text-4xl font-bold w-1/2 overflow-hidden transition-all ease-out transform -skew-y-6 text-transparent'>
         {delayedText.map((item, index) => (
           <MovingText key={index}>{item}</MovingText>
         ))}

@@ -1,9 +1,13 @@
 import { useEffect, useState } from 'react';
 import { Routes, Navigate, Route, useLocation } from 'react-router-dom';
 
-import { SideBar, SideBarLink, TopBar } from 'modules/components/index';
+import {
+  SideBar,
+  SideBarLink,
+  TopBar,
+  Notification,
+} from 'modules/components/index';
 import { AboutMe, Home, Portfolio, Contact } from 'pages/index';
-import { Notification } from 'modules/components/notifications/Notification';
 
 export function App() {
   const [theme, setTheme] = useState<string>('dark');

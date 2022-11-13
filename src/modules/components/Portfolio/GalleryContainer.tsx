@@ -17,9 +17,9 @@ export function GalleryContainer({
   };
 
   return (
-    <div className='w-screen lg:h-screen pt-20 lg:pt-0'>
+    <div className='w-screen md:h-screen pt-20 md:pt-0'>
       <div
-        className='lg:h-[200vh] lg:w-[200vw] duration-500 ease-out'
+        className='md:h-[200vh] md:w-[200vw] duration-500 ease-out'
         onMouseMove={handleMouse}
         style={
           window.innerWidth < 769

@@ -1,9 +1,4 @@
-interface navBtnInterface {
-  children: String;
-  onToggleMenu: Function;
-  onHover: Function;
-  tagState: Boolean;
-}
+import { navBtnInterface } from 'modules/types/index';
 
 export function NavButton({
   children,

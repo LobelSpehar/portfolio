@@ -26,7 +26,7 @@ export function Portfolio() {
   };
 
   return (
-    <main className='w-full h-full lg:overflow-hidden pb-10 lg:pb-0'>
+    <main className='w-full h-full md:overflow-hidden pb-10 md:pb-0'>
       <GalleryContainer>
         <>
           {projectsState &&
@@ -53,7 +53,7 @@ export function Portfolio() {
                 posY: 40,
                 width: 200,
                 height: 200,
-                color: '#f8f4e3',
+                color: '#706c61',
                 title: '',
                 text: '',
                 images: [GitHubLogo],
